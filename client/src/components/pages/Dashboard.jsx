@@ -104,15 +104,18 @@ const Dashboard = () => {
       .catch((err) => console.log("fetching error: " + err));
   }
   async function fetchProfile() {
-    const response = await fetch("http://localhost:8000/api/profile", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        token: secureLocalStorage.getItem("token"),
-      }),
-    });
+    const response = await fetch(
+      `${import.meta.env.VITE_BACKEND_HOST}/api/profile`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          token: secureLocalStorage.getItem("token"),
+        }),
+      }
+    );
     if(response.status == 200)
     {
       const data = await response.json();
