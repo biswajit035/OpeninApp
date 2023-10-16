@@ -1,0 +1,90 @@
+.dashboard {
+  @include mobile {
+    // display: none;
+  }
+
+  display: none;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  height: 100%;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+
+  .count-card {
+    // @include mobile{
+    //     flex-wrap: wrap;
+    // }
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+
+    .count {
+      @include mobile {
+        flex-basis: 25%;
+      }
+      height: fit-content;
+      flex-grow: 1;
+      background-color: white;
+    }
+  }
+
+  .pie-chart {
+    @include mobile {
+      // flex-direction: column;
+    }
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    .profile {
+      background: white;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 15px;
+      min-width: 250px;
+      height: 100%;
+      max-height: 150px;
+      box-sizing: border-box;
+      .add_profile {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        img{
+          cursor: pointer;
+        }
+      }
+      // padding-left: 40px;
+
+      .name {
+        font-weight: 600;
+      }
+
+      .social {
+        font-size: 10px;
+        display: flex;
+        gap: 45px;
+      }
+
+      .left,
+      .right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+}

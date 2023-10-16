@@ -1,0 +1,61 @@
+
+
+.navtoggl label{
+ display:flex;
+  flex-direction:column;
+  width:30px;
+  cursor:pointer;
+      gap: 5px;
+}
+
+.navtoggl label span{
+  background: black;
+  border-radius:10px;
+  height:4px;
+  /* margin: 7px 0; */
+  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+}
+
+
+.navtoggl span:nth-of-type(1){
+  width:50%;
+  
+}
+
+.navtogl span:nth-of-type(2){
+  width:100%;
+}
+
+
+.navtoggl span:nth-of-type(3){
+  width:75%;
+ 
+}
+
+
+.navtoggl input[type="checkbox"]{
+  display:none;
+}
+
+
+.navtoggl input[type="checkbox"]:checked ~ span:nth-of-type(1){
+  transform-origin:bottom;
+  transform:rotatez(45deg) translate(3px,-1px);
+}
+
+
+.navtoggl input[type="checkbox"]:checked ~ span:nth-of-type(2){
+  
+  transform-origin:top;
+  transform:rotatez(-45deg)
+}
+
+
+.navtoggl input[type="checkbox"]:checked ~ span:nth-of-type(3){
+  
+  transform-origin:bottom;
+  width:50%;
+  transform: translate(14px,-5px) rotatez(45deg);
+
+}

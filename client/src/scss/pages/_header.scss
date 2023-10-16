@@ -1,0 +1,96 @@
+.header {
+
+  @include mobile{
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+
+  .navtoggl{
+    @include mobile{
+      display: block;
+    }
+    order: -4;
+    display: none;
+  }
+
+  .title {
+    @include mobile{
+      order: -4;
+      font-weight: 700;
+    }
+    margin-right: auto;
+  }
+
+  .search {
+    @include mobile{
+      flex-grow: 1;
+
+    }
+    display: flex;
+    background: white;
+    padding: 0px 10px;
+    border-radius: 10px;
+    // width: 220px;
+
+
+    .search-bar-body {
+      @include mobile{
+        flex-grow: 1;
+        height: 34px;
+      }
+      display: flex;
+      align-items: center;
+
+      input[type="text"] {
+        @include mobile{
+          flex-grow: 1;
+        }
+        @include tablet{
+         width: 150px;
+        }
+        border: none;
+        // min-width: 70px;
+        // width: 150px;
+        // flex: 1;
+      }
+      input:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .notification{
+    @include mobile{
+
+      order: -3;
+    }
+  }
+
+  .profile-pic {
+
+    @include mobile{
+      order: -2;
+    }
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  .logout{
+    // background: red;
+    height: 30px;
+    cursor: pointer;
+    @include mobile{
+      order: -1;
+    }
+
+    :active{
+      transform: scale(1.1);
+    }
+  }
+}

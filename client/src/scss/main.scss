@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    max-width: 100vw;
+}
+
+@import "./abstructs/Mixin";
+@import "./abstructs/color";
+@import './pages/landing';
+@import './pages/home';
+@import './pages/header';
+@import './pages/dashboard';
+@import './pages/count';
+@import './pages/modal';
