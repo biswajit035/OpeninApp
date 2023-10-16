@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import secureLocalStorage from "react-secure-storage";
 
 const Modal = ({ handleModal }) => {
@@ -23,20 +24,23 @@ const Modal = ({ handleModal }) => {
 
   const handeSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8000/api/profile", {
-      method: "put",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: form.email,
-        name: form.name,
-        mobile: form.mobile,
-        instagram: form.instagram,
-        youtube: form.youtube,
-        token: secureLocalStorage.getItem("token"),
-      }),
-    });
+    const response = await fetch(
+      `${import.meta.env.VITE_BACKEND_HOST}/api/profile`,
+      {
+        method: "put",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: form.email,
+          name: form.name,
+          mobile: form.mobile,
+          instagram: form.instagram,
+          youtube: form.youtube,
+          token: secureLocalStorage.getItem("token"),
+        }),
+      }
+    );
     const data = await response.json();
     window.location.reload();
   };
