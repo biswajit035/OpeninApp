@@ -10,6 +10,7 @@
   justify-content: space-between;
   gap: 15px;
   height: 100%;
+  padding: 5px;
   &::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -46,6 +47,7 @@
     justify-content: space-between;
 
     .profile {
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 6px -1px;
       background: white;
       padding: 25px;
       display: flex;

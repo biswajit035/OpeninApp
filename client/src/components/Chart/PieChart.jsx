@@ -16,7 +16,7 @@ const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Bar Chart",
+      text: "Top Products",
     },
   },
   maintainAspectRatio: false,
@@ -29,6 +29,7 @@ const Style = {
   height: "150px",
   background: "white",
   borderRadius: "15px",
+  boxShadow: "rgba(0, 0, 0, 0.75) 0px 0px 6px -1px",
 };
 
 const PieChart = ({pieInfo}) => {

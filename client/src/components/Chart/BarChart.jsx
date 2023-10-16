@@ -42,7 +42,8 @@ const Style = {
   width: "99%",
   height: "200px",
   background: "white",
-  borderRadius: "15px"
+  borderRadius: "15px",
+  boxShadow: "rgba(0, 0, 0, 0.75) 0px 0px 6px -1px"
 };
 
 const BarChart = ({data}) => {
