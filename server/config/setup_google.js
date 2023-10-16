@@ -5,7 +5,8 @@ const GoogleSrategy = require('passport-google-oauth2').Strategy;
 passport.use(
   new GoogleSrategy(
     {
-      callbackURL: "http://localhost:8000/api/google/callback",
+      callbackURL:
+        "https://weak-rose-cheetah-hat.cyclic.app/api/google/callback",
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
     },
